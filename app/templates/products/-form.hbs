@@ -1,0 +1,46 @@
+<form class="productForm" {{action "save" on="submit"}}>
+  <h3>{{model.errorMessage}}</h3>
+  <p>
+    <label>Name:*  {{input value=model.name}}</label>
+  </p>
+  <p>
+    <label>Short Name: {{input value=model.shortName }}</label>
+  </p>
+  <p>
+    <label>Brand:* {{input value=model.brand }}</label>
+  </p>
+  <p>
+    <label>Category:* {{input value=model.category }}</label>
+  </p>
+  <p>
+    <label>Price: {{input value=model.price }}</label>
+  </p>
+  <p>
+    <label>Size: {{input value=model.size }}</label>
+  </p>
+  <p>
+    <label>Unit: {{input value=model.sizeUnit }}</label>
+  </p>
+  <p>
+    <label>Retailer: {{input value=model.retailer }}</label>
+  </p>
+  <p>
+    <label>Ingredients: {{input value=model.ingredients }}</label>
+  </p>
+  <p>
+    <label>Image Filename:* {{input value=model.image }}</label>
+  </p>
+  <input type="submit" value="Save"/>
+  <button {{action "cancel"}}>Cancel</button>
+</form>
+<div class="productDisplay">
+  <h1>{{model.name}}</h1>
+  {{model.brand}}<br />
+  {{model.category}}<br />
+  ${{model.price}}<br />
+  {{model.size}}
+  {{model.sizeUnit}}<br />
+  {{model.retailer}}<br />
+  {{model.ingredients}}<br />
+  {{model.image}}
+</div>

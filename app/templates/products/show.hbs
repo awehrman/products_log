@@ -1,1 +1,14 @@
-{{outlet}}
+<div class="productDisplay">
+  <h1>{{model.name}}</h1>
+  {{link-to "Edit Product" 'products.edit' model}} |
+  <a href="#" {{action "delete" model}}>delete</a><br />
+  {{model.shortName}}<br />
+  {{model.brand}}<br />
+  {{model.category}}<br />
+  ${{model.price}}<br />
+  {{model.size}} {{model.sizeUnit}}<br />
+  {{model.retailer}}<br />
+  {{model.ingredients}}<br />
+  {{model.image}}
+</div><br />
+{{#link-to 'products'}}Back to Products{{/link-to}}

@@ -1,0 +1,15 @@
+<h2>Total Products: {{model.length}}</h2>
+<div class="addProduct">
+  {{#link-to 'products.new'}}+ Add Product{{/link-to}}
+</div>
+<br />
+<div class="products">
+  {{#each product in model}}
+    <div class="product">
+      {{#link-to 'products.show' product}}
+        {{product.name}}<br />
+        <em>{{product.category}}</em>
+      {{/link-to}}
+    </div><br />
+  {{/each}}
+</div>
